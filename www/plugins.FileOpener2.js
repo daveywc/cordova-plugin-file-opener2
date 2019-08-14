@@ -32,10 +32,10 @@ FileOpener2.prototype.open = function (fileName, contentType, callbackContext) {
     exec(callbackContext.success || null, callbackContext.error || null, 'FileOpener2', 'open', [fileName, contentType]);
 };
 
-FileOpener2.prototype.showOpenWithDialog = function (fileName, contentType, callbackContext) {
+FileOpener2.prototype.showOpenWithDialog = function (fileName, contentType, callbackContext, position) {
     contentType = contentType || '';
     callbackContext = callbackContext || {};
-    exec(callbackContext.success || null, callbackContext.error || null, 'FileOpener2', 'open', [fileName, contentType, false]);
+    exec(callbackContext.success || null, callbackContext.error || null, 'FileOpener2', 'open', [fileName, contentType, false, position]);
 };
 
 FileOpener2.prototype.uninstall = function (packageId, callbackContext) {
